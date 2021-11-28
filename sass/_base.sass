@@ -1,14 +1,127 @@
 $font-stack: Helvetica, sans-serif
-$primary-color: #999
+
+$primary-color: #444
+$red: #bb1919
+
+.main-grid-pic
 
 body
+  // padding: 0 22em
   font: 100% $font-stack
   color: $primary-color
 
-  h1
-    color: red
+  .container
+    padding: 0 22em
 
+    header
 
+      .header-top
+        display: flex
+        justify-items: center
+        // align-content: center
+        background: lightyellow
 
+        .htm
+          ul
+            display: flex
 
-  
+            li
+              background: lightgreen
+              margin: 0.25em
+              padding: 0.25em
+
+      .header-mid
+
+        // display: flex
+        background-color: $red
+        color: white
+        margin: 0 -22em
+        padding: 0 22em
+
+        h1
+
+        nav
+          ul
+            display: flex
+            li
+              background: #222
+              margin: 0.25em
+              padding: 0.25em
+
+      .header-bot
+
+        nav
+
+          ul
+            display: flex
+
+            li
+              background: #111
+              margin: 0.25em
+              padding: 0.25em
+
+  .main
+    display: flex
+
+    .main-article
+      min-width: 500px
+      margin-right: 2em
+
+      .main-article-img
+        // width: 500px
+
+    .main-grid
+      // background: #999
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: 1fr
+      gap: 1em
+
+      article
+        background: #777
+        width: 300px
+
+      .main1
+        grid-area: main1
+      .main2
+        grid-area: main2
+      .main3
+        grid-area: main3
+      .main4
+        grid-area: main4
+      .main5
+        grid-area: main5
+      .main6
+        grid-area: main6
+
+      .main-grid-pic
+        // width: 250px
+
+  .a
+    display: flex
+    gap: 1em
+    margin-top: 2em
+
+  .b
+    // display: flex
+    // gap: 1em
+    margin-top: 2em
+
+  .b-grid
+    display: flex
+    gap: 1em
+    // margin-top: 2em
+
+    article
+      width: 300
+
+  .c
+      margin: 2em 0
+
+  .c-grid
+    display: flex
+    gap: 1em
+    // margin-top: 2em
+
+    article
+      width: 300
