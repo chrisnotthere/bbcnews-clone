@@ -29,6 +29,8 @@ body
               background: lightgreen
               margin: 0.25em
               padding: 0.25em
+              &:hover
+                background: red
 
       .header-mid
 
@@ -38,7 +40,7 @@ body
         margin: 0 -22em
         padding: 0 22em
 
-        h1
+        // h1
 
         nav
           ul
@@ -125,3 +127,107 @@ body
 
     article
       width: 300
+
+  .findus
+    .findus-header
+      display: flex
+      h3
+        // flex-wrap: nowrap
+        width: 130px
+
+      hr
+        width: 100%
+        // border-style: none
+        border-left: none
+        border-bottom: none
+        border-right: none
+
+    .findus-grid
+      background: lightblue
+      padding: 2em
+      display: grid
+      // grid-auto-flow: column
+      grid-template-columns: repeat(5, minmax(0, 1fr))
+      grid-template-rows: 0.5fr 0.5fr
+      grid-template: 'socials empty daily news a' 'socials empty daily news b'
+      .socials
+        display: flex
+        grid-area: socials
+        div
+          width: 100px
+          height: 100px
+          display: flex
+          justify-content: center
+          align-items: center
+        img
+          width: 50px
+          margin: auto
+        
+        .socials-twitter
+          background: lightyellow
+        .socials-facebook
+          background: lightyred
+        .socials-instagram
+          background: cyan
+      .empty
+        grid-area: empty
+        width: 300px
+      .findus-daily
+        grid-area: daily
+        img
+          width: 50px
+      .findus-news
+        grid-area: news
+        img
+          width: 50px
+      .info-a
+        grid-area: a
+      .info-b
+        grid-area: b
+      .top
+        display: flex
+        align-items: center
+        gap: 1em
+        h3
+          border-left: 3px solid grey
+          padding-left: 1em
+
+
+  footer
+    
+    .footer-top
+      margin: 0 -22em
+      padding: 0 22em
+      background-color: #dddddd
+      h4
+        font-size: 1.5rem
+
+      .ft-grid
+        ul
+          display: flex
+          justify-content: space-between
+          a
+            display: flex
+            img
+              margin-right: 1em
+              width: 25px
+
+    .footer-bottom
+      margin: 0 -22em
+      padding: 0 22em 1em 22em
+      background: #a87575
+      h4
+        font-size: 1.5rem
+
+      .fb-grid-a
+        columns: 6
+        margin: 2em 0
+      .fb-grid-b
+        ul
+          // columns: 9
+          display: flex
+          flex-direction: row
+          gap: 0.5em
+      .footer-bottom-foot
+        margin-top: 1em
+

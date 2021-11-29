@@ -42,6 +42,9 @@ body .container header .header-top .htm ul li {
   margin: 0.25em;
   padding: 0.25em;
 }
+body .container header .header-top .htm ul li:hover {
+  background: red;
+}
 body .container header .header-mid {
   background-color: #bb1919;
   color: white;
@@ -123,6 +126,120 @@ body .c-grid {
 }
 body .c-grid article {
   width: 300;
+}
+body .findus .findus-header {
+  display: flex;
+}
+body .findus .findus-header h3 {
+  width: 130px;
+}
+body .findus .findus-header hr {
+  width: 100%;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+body .findus .findus-grid {
+  background: lightblue;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: 0.5fr 0.5fr;
+  grid-template: "socials empty daily news a" "socials empty daily news b";
+}
+body .findus .findus-grid .socials {
+  display: flex;
+  grid-area: socials;
+}
+body .findus .findus-grid .socials div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .findus .findus-grid .socials img {
+  width: 50px;
+  margin: auto;
+}
+body .findus .findus-grid .socials .socials-twitter {
+  background: lightyellow;
+}
+body .findus .findus-grid .socials .socials-facebook {
+  background: lightyred;
+}
+body .findus .findus-grid .socials .socials-instagram {
+  background: cyan;
+}
+body .findus .findus-grid .empty {
+  grid-area: empty;
+  width: 300px;
+}
+body .findus .findus-grid .findus-daily {
+  grid-area: daily;
+}
+body .findus .findus-grid .findus-daily img {
+  width: 50px;
+}
+body .findus .findus-grid .findus-news {
+  grid-area: news;
+}
+body .findus .findus-grid .findus-news img {
+  width: 50px;
+}
+body .findus .findus-grid .info-a {
+  grid-area: a;
+}
+body .findus .findus-grid .info-b {
+  grid-area: b;
+}
+body .findus .findus-grid .top {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+body .findus .findus-grid .top h3 {
+  border-left: 3px solid grey;
+  padding-left: 1em;
+}
+body footer .footer-top {
+  margin: 0 -22em;
+  padding: 0 22em;
+  background-color: #dddddd;
+}
+body footer .footer-top h4 {
+  font-size: 1.5rem;
+}
+body footer .footer-top .ft-grid ul {
+  display: flex;
+  justify-content: space-between;
+}
+body footer .footer-top .ft-grid ul a {
+  display: flex;
+}
+body footer .footer-top .ft-grid ul a img {
+  margin-right: 1em;
+  width: 25px;
+}
+body footer .footer-bottom {
+  margin: 0 -22em;
+  padding: 0 22em 1em 22em;
+  background: #a87575;
+}
+body footer .footer-bottom h4 {
+  font-size: 1.5rem;
+}
+body footer .footer-bottom .fb-grid-a {
+  columns: 6;
+  margin: 2em 0;
+}
+body footer .footer-bottom .fb-grid-b ul {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+body footer .footer-bottom .footer-bottom-foot {
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=styles.css.map */
