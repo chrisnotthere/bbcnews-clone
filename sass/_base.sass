@@ -6,20 +6,33 @@ $red: #bb1919
 .main-grid-pic
 
 body
-  // padding: 0 22em
   font: 100% $font-stack
-  color: $primary-color
+  // color: $primary-color
+  max-width: 100%
+  overflow-x: hidden
 
   .container
-    padding: 0 22em
+    width: 1250px
+    margin: 0 auto
 
     header
 
       .header-top
         display: flex
-        justify-items: center
+        // justify-items: center
         // align-content: center
         background: lightyellow
+
+        .htl
+          display: flex
+          align-items: center
+          img
+            margin-right: 0.5em
+          .sign-in
+            padding: 0.7em 6em 0.7em 1em
+            border-left: 1px solid grey
+            &:hover
+              background: red
 
         .htm
           ul
@@ -27,18 +40,27 @@ body
 
             li
               background: lightgreen
-              margin: 0.25em
-              padding: 0.25em
+              // margin: 0.25em
+              padding: 0.75em
+              border-left: 1px solid grey
+              // border-right: 1px solid grey
+
+
               &:hover
                 background: red
+                
+            .more-link
+              padding-right: 3em
+        .htr
+          display: flex
 
       .header-mid
 
         // display: flex
         background-color: $red
         color: white
-        margin: 0 -22em
-        padding: 0 22em
+        margin: 0 -30em
+        padding: 0 30em
 
         // h1
 
@@ -67,7 +89,7 @@ body
 
     .main-article
       min-width: 500px
-      margin-right: 2em
+      margin-right: 1em
 
       .main-article-img
         // width: 500px
@@ -81,7 +103,7 @@ body
 
       article
         background: #777
-        width: 300px
+        width: 250px
 
       .main1
         grid-area: main1
@@ -118,7 +140,7 @@ body
       width: 300
 
   .c
-      margin: 2em 0
+    margin: 2em 0
 
   .c-grid
     display: flex
@@ -147,7 +169,7 @@ body
       padding: 2em
       display: grid
       // grid-auto-flow: column
-      grid-template-columns: repeat(5, minmax(0, 1fr))
+      grid-template-columns: repeat(5, minmax(1fr, 1fr))
       grid-template-rows: 0.5fr 0.5fr
       grid-template: 'socials empty daily news a' 'socials empty daily news b'
       .socials
@@ -162,7 +184,7 @@ body
         img
           width: 50px
           margin: auto
-        
+
         .socials-twitter
           background: lightyellow
         .socials-facebook
@@ -192,9 +214,8 @@ body
           border-left: 3px solid grey
           padding-left: 1em
 
-
   footer
-    
+
     .footer-top
       margin: 0 -22em
       padding: 0 22em
@@ -230,4 +251,3 @@ body
           gap: 0.5em
       .footer-bottom-foot
         margin-top: 1em
-

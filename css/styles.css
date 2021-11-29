@@ -24,32 +24,53 @@ img {
 
 body {
   font: 100% Helvetica, sans-serif;
-  color: #444;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 body .container {
-  padding: 0 22em;
+  width: 1250px;
+  margin: 0 auto;
 }
 body .container header .header-top {
   display: flex;
-  justify-items: center;
   background: lightyellow;
+}
+body .container header .header-top .htl {
+  display: flex;
+  align-items: center;
+}
+body .container header .header-top .htl img {
+  margin-right: 0.5em;
+}
+body .container header .header-top .htl .sign-in {
+  padding: 0.7em 6em 0.7em 1em;
+  border-left: 1px solid grey;
+}
+body .container header .header-top .htl .sign-in:hover {
+  background: red;
 }
 body .container header .header-top .htm ul {
   display: flex;
 }
 body .container header .header-top .htm ul li {
   background: lightgreen;
-  margin: 0.25em;
-  padding: 0.25em;
+  padding: 0.75em;
+  border-left: 1px solid grey;
 }
 body .container header .header-top .htm ul li:hover {
   background: red;
 }
+body .container header .header-top .htm ul .more-link {
+  padding-right: 3em;
+}
+body .container header .header-top .htr {
+  display: flex;
+}
 body .container header .header-mid {
   background-color: #bb1919;
   color: white;
-  margin: 0 -22em;
-  padding: 0 22em;
+  margin: 0 -30em;
+  padding: 0 30em;
 }
 body .container header .header-mid nav ul {
   display: flex;
@@ -72,7 +93,7 @@ body .main {
 }
 body .main .main-article {
   min-width: 500px;
-  margin-right: 2em;
+  margin-right: 1em;
 }
 body .main .main-grid {
   display: grid;
@@ -82,7 +103,7 @@ body .main .main-grid {
 }
 body .main .main-grid article {
   background: #777;
-  width: 300px;
+  width: 250px;
 }
 body .main .main-grid .main1 {
   grid-area: main1;
@@ -143,7 +164,7 @@ body .findus .findus-grid {
   background: lightblue;
   padding: 2em;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(1fr, 1fr));
   grid-template-rows: 0.5fr 0.5fr;
   grid-template: "socials empty daily news a" "socials empty daily news b";
 }
