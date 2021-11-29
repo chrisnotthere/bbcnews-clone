@@ -103,7 +103,6 @@ body .main .main-grid {
 }
 body .main .main-grid article {
   background: #777;
-  width: 250px;
 }
 body .main .main-grid .main1 {
   grid-area: main1;
@@ -126,7 +125,9 @@ body .main .main-grid .main6 {
 body .a {
   display: flex;
   gap: 1em;
-  margin-top: 2em;
+}
+body .a article {
+  width: 100%;
 }
 body .b {
   margin-top: 2em;
@@ -136,7 +137,7 @@ body .b-grid {
   gap: 1em;
 }
 body .b-grid article {
-  width: 300;
+  width: 100%;
 }
 body .c {
   margin: 2em 0;
@@ -146,7 +147,7 @@ body .c-grid {
   gap: 1em;
 }
 body .c-grid article {
-  width: 300;
+  width: 100%;
 }
 body .findus .findus-header {
   display: flex;
