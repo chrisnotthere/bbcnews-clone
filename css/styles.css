@@ -22,6 +22,64 @@ img {
   height: auto;
 }
 
+header .header-top {
+  display: flex;
+  background: lightyellow;
+}
+header .header-top .htl {
+  display: flex;
+  align-items: center;
+}
+header .header-top img {
+  margin-right: 0.5em;
+}
+header .header-top .sign-in {
+  padding: 0.7em 6em 0.7em 1em;
+  border-left: 1px solid grey;
+}
+header .header-top .sign-in:hover {
+  background: red;
+}
+header .header-top ul {
+  display: flex;
+}
+header .header-top ul li {
+  background: lightgreen;
+  padding: 0.75em;
+  border-left: 1px solid grey;
+}
+header .header-top ul li:hover {
+  background: red;
+}
+header .header-top ul .more-link {
+  padding-right: 3em;
+}
+header .header-top .htr {
+  display: flex;
+}
+header .header-mid {
+  background-color: #bb1919;
+  color: white;
+  margin: 0 -30em;
+  padding: 0 30em;
+}
+header .header-mid ul {
+  display: flex;
+}
+header .header-mid ul li {
+  background: #222;
+  margin: 0.25em;
+  padding: 0.25em;
+}
+header .header-bot ul {
+  display: flex;
+}
+header .header-bot ul li {
+  background: #111;
+  margin: 0.25em;
+  padding: 0.25em;
+}
+
 body {
   font: 100% Helvetica, sans-serif;
   max-width: 100%;
@@ -30,63 +88,6 @@ body {
 body .container {
   width: 1250px;
   margin: 0 auto;
-}
-body .container header .header-top {
-  display: flex;
-  background: lightyellow;
-}
-body .container header .header-top .htl {
-  display: flex;
-  align-items: center;
-}
-body .container header .header-top .htl img {
-  margin-right: 0.5em;
-}
-body .container header .header-top .htl .sign-in {
-  padding: 0.7em 6em 0.7em 1em;
-  border-left: 1px solid grey;
-}
-body .container header .header-top .htl .sign-in:hover {
-  background: red;
-}
-body .container header .header-top .htm ul {
-  display: flex;
-}
-body .container header .header-top .htm ul li {
-  background: lightgreen;
-  padding: 0.75em;
-  border-left: 1px solid grey;
-}
-body .container header .header-top .htm ul li:hover {
-  background: red;
-}
-body .container header .header-top .htm ul .more-link {
-  padding-right: 3em;
-}
-body .container header .header-top .htr {
-  display: flex;
-}
-body .container header .header-mid {
-  background-color: #bb1919;
-  color: white;
-  margin: 0 -30em;
-  padding: 0 30em;
-}
-body .container header .header-mid nav ul {
-  display: flex;
-}
-body .container header .header-mid nav ul li {
-  background: #222;
-  margin: 0.25em;
-  padding: 0.25em;
-}
-body .container header .header-bot nav ul {
-  display: flex;
-}
-body .container header .header-bot nav ul li {
-  background: #111;
-  margin: 0.25em;
-  padding: 0.25em;
 }
 body .main {
   display: flex;
@@ -122,46 +123,51 @@ body .main .main-grid .main5 {
 body .main .main-grid .main6 {
   grid-area: main6;
 }
-body .a {
+.a {
   display: flex;
   gap: 1em;
 }
-body .a article {
+.a article {
   width: 100%;
 }
-body .b {
+
+.b {
   margin-top: 2em;
 }
-body .b-grid {
+
+.b-grid {
   display: flex;
   gap: 1em;
 }
-body .b-grid article {
+.b-grid article {
   width: 100%;
 }
-body .c {
+
+.c {
   margin: 2em 0;
 }
-body .c-grid {
+
+.c-grid {
   display: flex;
   gap: 1em;
 }
-body .c-grid article {
+.c-grid article {
   width: 100%;
 }
-body .findus .findus-header {
+
+.findus .findus-header {
   display: flex;
 }
-body .findus .findus-header h3 {
+.findus h3 {
   width: 130px;
 }
-body .findus .findus-header hr {
+.findus hr {
   width: 100%;
   border-left: none;
   border-bottom: none;
   border-right: none;
 }
-body .findus .findus-grid {
+.findus .findus-grid {
   background: lightblue;
   padding: 2em;
   display: grid;
@@ -169,98 +175,100 @@ body .findus .findus-grid {
   grid-template-rows: 0.5fr 0.5fr;
   grid-template: "socials empty daily news a" "socials empty daily news b";
 }
-body .findus .findus-grid .socials {
+.findus .socials {
   display: flex;
   grid-area: socials;
 }
-body .findus .findus-grid .socials div {
+.findus .socials div {
   width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .findus .findus-grid .socials img {
+.findus .socials img {
   width: 50px;
   margin: auto;
 }
-body .findus .findus-grid .socials .socials-twitter {
+.findus .socials .socials-twitter {
   background: lightyellow;
 }
-body .findus .findus-grid .socials .socials-facebook {
+.findus .socials .socials-facebook {
   background: lightyred;
 }
-body .findus .findus-grid .socials .socials-instagram {
+.findus .socials .socials-instagram {
   background: cyan;
 }
-body .findus .findus-grid .empty {
+.findus .empty {
   grid-area: empty;
   width: 300px;
 }
-body .findus .findus-grid .findus-daily {
+.findus .findus-daily {
   grid-area: daily;
 }
-body .findus .findus-grid .findus-daily img {
+.findus .findus-daily img {
   width: 50px;
 }
-body .findus .findus-grid .findus-news {
+.findus .findus-news {
   grid-area: news;
 }
-body .findus .findus-grid .findus-news img {
+.findus .findus-news img {
   width: 50px;
 }
-body .findus .findus-grid .info-a {
+.findus .info-a {
   grid-area: a;
 }
-body .findus .findus-grid .info-b {
+.findus .info-b {
   grid-area: b;
 }
-body .findus .findus-grid .top {
+.findus .top {
   display: flex;
   align-items: center;
   gap: 1em;
 }
-body .findus .findus-grid .top h3 {
+.findus .top h3 {
   border-left: 3px solid grey;
   padding-left: 1em;
 }
-body footer .footer-top {
-  margin: 0 -22em;
-  padding: 0 22em;
-  background-color: #dddddd;
+
+footer .footer-top {
+  margin: 0 -50em;
+  padding: 0 50em;
+  background-color: #2f2f2f;
 }
-body footer .footer-top h4 {
+footer h4 {
   font-size: 1.5rem;
 }
-body footer .footer-top .ft-grid ul {
+footer .ft-grid ul {
   display: flex;
   justify-content: space-between;
 }
-body footer .footer-top .ft-grid ul a {
+footer .ft-grid a {
   display: flex;
 }
-body footer .footer-top .ft-grid ul a img {
+footer .ft-grid a img {
   margin-right: 1em;
   width: 25px;
 }
-body footer .footer-bottom {
-  margin: 0 -22em;
-  padding: 0 22em 1em 22em;
-  background: #a87575;
+footer .footer-bottom {
+  margin: 0 -50em;
+  padding: 0 50em 1em 50em;
+  background: #4c4c4c;
 }
-body footer .footer-bottom h4 {
+footer h4 {
   font-size: 1.5rem;
 }
-body footer .footer-bottom .fb-grid-a {
+footer .fb-grid-a {
   columns: 6;
   margin: 2em 0;
 }
-body footer .footer-bottom .fb-grid-b ul {
+footer .fb-grid-b ul {
   display: flex;
   flex-direction: row;
-  gap: 0.5em;
+  flex-wrap: wrap;
+  gap: 0.25em;
 }
-body footer .footer-bottom .footer-bottom-foot {
+footer .footer-bottom-foot {
   margin-top: 1em;
 }
 

@@ -1,0 +1,54 @@
+$font-stack: Helvetica, sans-serif
+
+
+.main-grid-pic
+
+body
+  font: 100% $font-stack
+  max-width: 100%
+  overflow-x: hidden
+
+  .container
+    width: 1250px
+    margin: 0 auto
+
+    
+
+  .main
+    display: flex
+
+    .main-article
+      min-width: 500px
+      margin-right: 1em
+
+      .main-article-img
+        // width: 500px
+
+    .main-grid
+      // background: #999
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: 1fr
+      gap: 1em
+
+      article
+        background: #777
+        // width: 250px
+
+      .main1
+        grid-area: main1
+      .main2
+        grid-area: main2
+      .main3
+        grid-area: main3
+      .main4
+        grid-area: main4
+      .main5
+        grid-area: main5
+      .main6
+        grid-area: main6
+
+      .main-grid-pic
+        // width: 250px
+
+  

@@ -1,0 +1,94 @@
+.a
+    display: flex
+    gap: 1em
+    // margin-top: 2em
+
+    article
+        width: 100%
+
+.b
+    // display: flex
+    // gap: 1em
+    margin-top: 2em
+
+.b-grid
+    display: flex
+    gap: 1em
+    // margin-top: 2em
+
+    article
+        width: 100%
+
+.c
+    margin: 2em 0
+
+.c-grid
+    display: flex
+    gap: 1em
+    // margin-top: 2em
+
+    article
+        width: 100%
+
+.findus
+    .findus-header
+        display: flex
+    h3
+        // flex-wrap: nowrap
+        width: 130px
+
+    hr
+        width: 100%
+        // border-style: none
+        border-left: none
+        border-bottom: none
+        border-right: none
+
+    .findus-grid
+        background: lightblue
+        padding: 2em
+        display: grid
+        grid-template-columns: repeat(5, minmax(1fr, 1fr))
+        grid-template-rows: 0.5fr 0.5fr
+        grid-template: 'socials empty daily news a' 'socials empty daily news b'
+    .socials
+        display: flex
+        grid-area: socials
+        div
+            width: 100px
+            height: 100px
+            display: flex
+            justify-content: center
+            align-items: center
+        img
+            width: 50px
+            margin: auto
+
+        .socials-twitter
+            background: lightyellow
+        .socials-facebook
+            background: lightyred
+        .socials-instagram
+            background: cyan
+    .empty
+        grid-area: empty
+        width: 300px
+    .findus-daily
+        grid-area: daily
+        img
+            width: 50px
+    .findus-news
+        grid-area: news
+        img
+            width: 50px
+    .info-a
+        grid-area: a
+    .info-b
+        grid-area: b
+    .top
+        display: flex
+        align-items: center
+        gap: 1em
+        h3
+            border-left: 3px solid grey
+            padding-left: 1em
