@@ -1,5 +1,5 @@
 $font-stack: Verdana, Arial, Helvetica, sans-serif
-
+@import '_colors'
 
 .main-grid-pic
 
@@ -18,20 +18,96 @@ body
     .main-article
       min-width: 500px
       margin-right: 1em
+      cursor: pointer
+      p
+        margin: 0.5em 0
+        color: $dark-grey
+
+      h2
+        font-size: 1.75rem
+        font-weight: 800
+        &:hover
+          color: $link-blue
+          text-decoration: underline
 
       .main-article-img
-        // width: 500px
 
+      .article-info
+        display: flex
+        align-items: center
+        gap: 0.5em
+
+        .afl
+          border-right: 1px solid $light-grey
+          padding-right: 0.5em
+          color: $dark-grey
+        .afr
+          font-size: 0.9rem
+          &:hover
+            color: $link-blue
+            text-decoration: underline
+      .main-article-headlines
+        font-weight: 700
+        list-style: disc
+        margin: 2em 1em
+        line-height: 1.5rem
+        li
+          cursor: pointer
+          &:hover
+            color: $link-blue
+            text-decoration: underline
+
+
+  
     .main-grid
-      // background: #999
       display: grid
       grid-template-columns: 1fr 1fr 1fr
       grid-template-rows: 1fr
       gap: 1em
 
       article
-        background: #777
-        // width: 250px
+        cursor: pointer
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        img
+
+        h3
+          font-weight: 600
+          &:hover
+            color: $link-blue
+            text-decoration: underline
+
+        p
+          color: $dark-grey
+          font-size: 0.9rem
+
+        .article-foot
+          display: flex
+          align-items: center
+          gap: 0.75em
+          margin-top: 0.25em
+          img
+            width: 15px
+          span
+            color: $dark-grey
+            position: relative
+            &::after
+              content: ''
+              width: 1px
+              height: 15px
+              background: $grey
+              position: absolute
+              bottom: 2px
+              right: -7px
+
+          p
+            color: black
+            font-size: 0.9rem
+            &:hover
+              color: $link-blue
+              text-decoration: underline
 
       .main1
         grid-area: main1
@@ -48,5 +124,3 @@ body
 
       .main-grid-pic
         // width: 250px
-
-  

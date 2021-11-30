@@ -180,6 +180,49 @@ body .main {
 body .main .main-article {
   min-width: 500px;
   margin-right: 1em;
+  cursor: pointer;
+}
+body .main .main-article p {
+  margin: 0.5em 0;
+  color: #504f4f;
+}
+body .main .main-article h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+body .main .main-article h2:hover {
+  color: #2c888f;
+  text-decoration: underline;
+}
+body .main .main-article .article-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+body .main .main-article .article-info .afl {
+  border-right: 1px solid #dadada;
+  padding-right: 0.5em;
+  color: #504f4f;
+}
+body .main .main-article .article-info .afr {
+  font-size: 0.9rem;
+}
+body .main .main-article .article-info .afr:hover {
+  color: #2c888f;
+  text-decoration: underline;
+}
+body .main .main-article .main-article-headlines {
+  font-weight: 700;
+  list-style: disc;
+  margin: 2em 1em;
+  line-height: 1.5rem;
+}
+body .main .main-article .main-article-headlines li {
+  cursor: pointer;
+}
+body .main .main-article .main-article-headlines li:hover {
+  color: #2c888f;
+  text-decoration: underline;
 }
 body .main .main-grid {
   display: grid;
@@ -188,7 +231,51 @@ body .main .main-grid {
   gap: 1em;
 }
 body .main .main-grid article {
-  background: #777;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .main .main-grid article h3 {
+  font-weight: 600;
+}
+body .main .main-grid article h3:hover {
+  color: #2c888f;
+  text-decoration: underline;
+}
+body .main .main-grid article p {
+  color: #504f4f;
+  font-size: 0.9rem;
+}
+body .main .main-grid article .article-foot {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin-top: 0.25em;
+}
+body .main .main-grid article .article-foot img {
+  width: 15px;
+}
+body .main .main-grid article .article-foot span {
+  color: #504f4f;
+  position: relative;
+}
+body .main .main-grid article .article-foot span::after {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #949494;
+  position: absolute;
+  bottom: 2px;
+  right: -7px;
+}
+body .main .main-grid article .article-foot p {
+  color: black;
+  font-size: 0.9rem;
+}
+body .main .main-grid article .article-foot p:hover {
+  color: #2c888f;
+  text-decoration: underline;
 }
 body .main .main-grid .main1 {
   grid-area: main1;
