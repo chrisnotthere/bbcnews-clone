@@ -3,58 +3,104 @@
 @import '_colors'
 
 header
+    font-size: 0.85rem
+    font-weight: 900
 
     .header-top
         display: flex
-        // justify-items: center
-        // align-content: center
-        background: lightyellow
 
         .htl
             display: flex
             align-items: center
-        img
-            margin-right: 0.5em
+            .bbc-logo
+                cursor: pointer
+                margin-right: 0.75em
+
         .sign-in
-            padding: 0.7em 6em 0.7em 1em
+            cursor: pointer
+            padding: 0.7em 8em 0.7em 1em
             border-left: 1px solid grey
+            border-bottom: 4px solid white
+            display: flex
+            align-items: center
             &:hover
-                background: red
+                border-bottom: 4px solid $hover-blue
+            img
+                width: 20px
+                margin-right: 0.5em
 
         .htm
         ul
             display: flex
 
             li
-                background: lightgreen
-                padding: 0.75em
+                cursor: pointer
+                padding: 0.75em 1.25em
                 border-left: 1px solid grey
+                height: 100%
                 &:hover
-                    background: red
+                    border-bottom: 4px solid $hover-blue
 
             .more-link
-                padding-right: 3em
+                padding-right: 6em
+                display: flex
+                position: relative
+                border-right: 1px solid grey
+                .down
+                    width: 15px
+                    position: absolute
+                    right: 0.5em
         .htr
             display: flex
+            align-items: center
+            position: relative
+            input
+                height: 30px
+                margin-left: 1.25em
+                border: none
+                background-color: $light-grey
+                padding-left: 0.5em
+            img
+                width: 15px
+                position: absolute
+                right: 0.5em
 
     .header-mid
-
         // display: flex
         background-color: $red
         color: white
-        margin: 0 -30em
-        padding: 0 30em
+        margin: 0 -100vw
+        padding: 0.5em 100vw 0 100vw
+        // padding-bottom: -2em!important
 
-        // h1
-
+        h1
+            font-size: 3rem
+            text-transform: uppercase
+            // margin-top: 0.25em
         nav
         ul
             display: flex
             li
-                background: #222
+                // background-color: #111
+                cursor: pointer
                 margin: 0.25em
-                padding: 0.25em
-
+                padding: 0.5em 0.75em
+                // border-right: 1px solid $light-grey
+                position: relative
+                border-bottom: 5px solid $red
+                &::after
+                    content: ''
+                    width: 1px
+                    height: 15px
+                    background: $light-grey
+                    position: absolute
+                    bottom: 7px
+                    right: -5px
+                &:hover
+                    border-bottom: 5px solid white
+            .news-more
+                &::after
+                    content: none
     .header-bot
 
         nav

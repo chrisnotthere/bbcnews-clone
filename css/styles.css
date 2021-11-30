@@ -22,54 +22,110 @@ img {
   height: auto;
 }
 
+header {
+  font-size: 0.85rem;
+  font-weight: 900;
+}
 header .header-top {
   display: flex;
-  background: lightyellow;
 }
 header .header-top .htl {
   display: flex;
   align-items: center;
 }
-header .header-top img {
-  margin-right: 0.5em;
+header .header-top .htl .bbc-logo {
+  cursor: pointer;
+  margin-right: 0.75em;
 }
 header .header-top .sign-in {
-  padding: 0.7em 6em 0.7em 1em;
+  cursor: pointer;
+  padding: 0.7em 8em 0.7em 1em;
   border-left: 1px solid grey;
+  border-bottom: 4px solid white;
+  display: flex;
+  align-items: center;
 }
 header .header-top .sign-in:hover {
-  background: red;
+  border-bottom: 4px solid #3fbbaa;
+}
+header .header-top .sign-in img {
+  width: 20px;
+  margin-right: 0.5em;
 }
 header .header-top ul {
   display: flex;
 }
 header .header-top ul li {
-  background: lightgreen;
-  padding: 0.75em;
+  cursor: pointer;
+  padding: 0.75em 1.25em;
   border-left: 1px solid grey;
+  height: 100%;
 }
 header .header-top ul li:hover {
-  background: red;
+  border-bottom: 4px solid #3fbbaa;
 }
 header .header-top ul .more-link {
-  padding-right: 3em;
+  padding-right: 6em;
+  display: flex;
+  position: relative;
+  border-right: 1px solid grey;
+}
+header .header-top ul .more-link .down {
+  width: 15px;
+  position: absolute;
+  right: 0.5em;
 }
 header .header-top .htr {
   display: flex;
+  align-items: center;
+  position: relative;
+}
+header .header-top .htr input {
+  height: 30px;
+  margin-left: 1.25em;
+  border: none;
+  background-color: #dadada;
+  padding-left: 0.5em;
+}
+header .header-top .htr img {
+  width: 15px;
+  position: absolute;
+  right: 0.5em;
 }
 header .header-mid {
   background-color: #bb1919;
   color: white;
-  margin: 0 -30em;
-  padding: 0 30em;
+  margin: 0 -100vw;
+  padding: 0.5em 100vw 0 100vw;
+}
+header .header-mid h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
 }
 header .header-mid ul {
   display: flex;
 }
 header .header-mid ul li {
-  background: #222;
+  cursor: pointer;
   margin: 0.25em;
-  padding: 0.25em;
+  padding: 0.5em 0.75em;
+  position: relative;
+  border-bottom: 5px solid #bb1919;
+}
+header .header-mid ul li::after {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #dadada;
+  position: absolute;
+  bottom: 7px;
+  right: -5px;
+}
+header .header-mid ul li:hover {
+  border-bottom: 5px solid white;
+}
+header .header-mid ul .news-more::after {
+  content: none;
 }
 header .header-bot ul {
   display: flex;
@@ -81,7 +137,7 @@ header .header-bot ul li {
 }
 
 body {
-  font: 100% Helvetica, sans-serif;
+  font: 100% Arial, Helvetica, sans-serif;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -232,8 +288,8 @@ body .main .main-grid .main6 {
 }
 
 footer .footer-top {
-  margin: 0 -50em;
-  padding: 0 50em;
+  margin: 0 -100vw;
+  padding: 0 100vw;
   background-color: #2f2f2f;
 }
 footer h4 {
@@ -251,8 +307,8 @@ footer .ft-grid a img {
   width: 25px;
 }
 footer .footer-bottom {
-  margin: 0 -50em;
-  padding: 0 50em 1em 50em;
+  margin: 0 -100vw;
+  padding: 0 100vw 1em 100vw;
   background: #4c4c4c;
 }
 footer h4 {
