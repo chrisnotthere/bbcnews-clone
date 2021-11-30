@@ -295,43 +295,110 @@ body .main .main-grid .main5 {
 body .main .main-grid .main6 {
   grid-area: main6;
 }
+article {
+  width: 100%;
+  cursor: pointer;
+}
+article h4 {
+  font-weight: 700;
+  margin: 0.5em 0;
+}
+article h4:hover {
+  color: #2c888f;
+}
+article .a-foot {
+  display: flex;
+  gap: 0.5em;
+  font-size: 0.9rem;
+}
+article .a-foot img {
+  width: 15px;
+}
+article .a-foot span {
+  color: #504f4f;
+}
+article .a-foot p:hover {
+  color: #3fbbaa;
+  text-decoration: underline;
+}
+
+.a-title {
+  display: flex;
+  align-items: center;
+  margin: 6em 0 2em 0;
+}
+.a-title h3 {
+  width: 160px;
+  font-size: 1.5rem;
+}
+.a-title hr {
+  width: 100%;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
 .a {
   display: flex;
   gap: 1em;
 }
-.a article {
-  width: 100%;
-}
 
-.b {
-  margin-top: 2em;
+.b .b-title {
+  display: flex;
+  align-items: center;
+  margin: 2em 0;
+}
+.b .b-title h3 {
+  width: 290px;
+  font-size: 1.5rem;
+}
+.b hr {
+  width: 100%;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
 }
 
 .b-grid {
   display: flex;
   gap: 1em;
 }
-.b-grid article {
-  width: 100%;
-}
 
 .c {
   margin: 2em 0;
+}
+.c .c-title {
+  display: flex;
+  align-items: center;
+  margin: 2em 0;
+}
+.c .c-title h3 {
+  width: 170px;
+  font-size: 1.5rem;
+}
+.c hr {
+  width: 100%;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
 }
 
 .c-grid {
   display: flex;
   gap: 1em;
 }
-.c-grid article {
-  width: 100%;
-}
 
+.findus {
+  margin-bottom: 4em;
+}
 .findus .findus-header {
   display: flex;
+  align-items: center;
+  margin: 2em 0 1em 0;
 }
 .findus h3 {
-  width: 130px;
+  font-size: 1.5rem;
+  width: 170px;
 }
 .findus hr {
   width: 100%;
@@ -340,8 +407,6 @@ body .main .main-grid .main6 {
   border-right: none;
 }
 .findus .findus-grid {
-  background: lightblue;
-  padding: 2em;
   display: grid;
   grid-template-columns: repeat(5, minmax(1fr, 1fr));
   grid-template-rows: 0.5fr 0.5fr;
@@ -357,35 +422,80 @@ body .main .main-grid .main6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  margin: 0.5em;
+  cursor: pointer;
+}
+.findus .socials div:hover {
+  filter: brightness(75%);
 }
 .findus .socials img {
   width: 50px;
   margin: auto;
 }
 .findus .socials .socials-twitter {
-  background: lightyellow;
+  fill: #1da1f2;
+  background: #1da1f2;
 }
 .findus .socials .socials-facebook {
-  background: lightyred;
+  background: #3d5a98;
 }
 .findus .socials .socials-instagram {
-  background: cyan;
+  background: #d93175;
 }
 .findus .empty {
   grid-area: empty;
-  width: 300px;
+  width: 150px;
+}
+.findus a {
+  text-decoration: none;
+}
+.findus .findus-h3 {
+  font-size: 1.25rem;
+  color: #504f4f;
+  font-weight: 100;
+}
+.findus .findus-h3 span {
+  font-weight: 700;
 }
 .findus .findus-daily {
+  margin-right: 0.75em;
   grid-area: daily;
 }
 .findus .findus-daily img {
-  width: 50px;
+  height: 40px;
+  width: 40px;
+}
+.findus p {
+  color: black;
+  font-size: 0.9rem;
+}
+.findus p:hover {
+  color: #2c888f;
+  text-decoration: underline;
 }
 .findus .findus-news {
+  margin-right: 1em;
   grid-area: news;
 }
 .findus .findus-news img {
-  width: 50px;
+  height: 40px;
+  width: 40px;
+}
+.findus .findus-info p {
+  line-height: 1.25rem;
+  color: #504f4f;
+}
+.findus .findus-info p:hover {
+  text-decoration: none;
+}
+.findus .findus-info span {
+  color: black;
+  cursor: pointer;
+}
+.findus .findus-info span:hover {
+  text-decoration: underline;
+  color: #2c888f;
 }
 .findus .info-a {
   grid-area: a;
@@ -397,6 +507,7 @@ body .main .main-grid .main6 {
   display: flex;
   align-items: center;
   gap: 1em;
+  margin-bottom: 0.5em;
 }
 .findus .top h3 {
   border-left: 3px solid grey;
