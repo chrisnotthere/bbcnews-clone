@@ -66,26 +66,21 @@ header
                 right: 0.5em
 
     .header-mid
-        // display: flex
         background-color: $red
         color: white
         margin: 0 -100vw
         padding: 0.5em 100vw 0 100vw
-        // padding-bottom: -2em!important
 
         h1
             font-size: 3rem
             text-transform: uppercase
-            // margin-top: 0.25em
         nav
         ul
             display: flex
             li
-                // background-color: #111
                 cursor: pointer
                 margin: 0.25em
                 padding: 0.5em 0.75em
-                // border-right: 1px solid $light-grey
                 position: relative
                 border-bottom: 5px solid $red
                 &::after
@@ -101,14 +96,43 @@ header
             .news-more
                 &::after
                     content: none
+                &:hover
+                    background: black
+                    border-bottom: none
+                .small-down
+                        width: 10px
+            // .world-mid
+            //     border-bottom: 5px solid white!important
+
     .header-bot
 
         nav
 
         ul
             display: flex
+            align-items: center
 
             li
-                background: #111
+                font-size: 1rem
                 margin: 0.25em
-                padding: 0.25em
+                padding: 0.5em
+                border-bottom: 5px solid white
+                position: relative
+                &::after
+                    content: ''
+                    width: 1px
+                    height: 15px
+                    background: $light-grey
+                    position: absolute
+                    bottom: 9px
+                    right: -5px
+                &:hover
+                    border-bottom: 5px solid $red
+                &:first-child
+                    font-size: 1.25rem
+                    padding: 0.25em
+                &:last-child
+                    &::after
+                        content: none
+                    
+                

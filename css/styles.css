@@ -127,17 +127,46 @@ header .header-mid ul li:hover {
 header .header-mid ul .news-more::after {
   content: none;
 }
+header .header-mid ul .news-more:hover {
+  background: black;
+  border-bottom: none;
+}
+header .header-mid ul .news-more .small-down {
+  width: 10px;
+}
 header .header-bot ul {
   display: flex;
+  align-items: center;
 }
 header .header-bot ul li {
-  background: #111;
+  font-size: 1rem;
   margin: 0.25em;
+  padding: 0.5em;
+  border-bottom: 5px solid white;
+  position: relative;
+}
+header .header-bot ul li::after {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #dadada;
+  position: absolute;
+  bottom: 9px;
+  right: -5px;
+}
+header .header-bot ul li:hover {
+  border-bottom: 5px solid #bb1919;
+}
+header .header-bot ul li:first-child {
+  font-size: 1.25rem;
   padding: 0.25em;
+}
+header .header-bot ul li:last-child::after {
+  content: none;
 }
 
 body {
-  font: 100% Arial, Helvetica, sans-serif;
+  font: 100% Verdana, Arial, Helvetica, sans-serif;
   max-width: 100%;
   overflow-x: hidden;
 }
