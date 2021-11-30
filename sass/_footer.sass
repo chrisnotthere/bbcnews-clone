@@ -1,13 +1,26 @@
 @import '_colors'
 
 footer
+    color: white
+    a
+        color: white
+        text-decoration: none
+        font-size: 0.9rem
+        &:hover
+            text-decoration: underline
+    img
+        // width: 50px
 
     .footer-top
         margin: 0 -100vw
-        padding: 0 100vw
+        padding: 1em 100vw
         background-color: $footer-grey2
+        border-bottom: 2px solid $grey
     h4
         font-size: 1.5rem
+        margin-bottom: 0.5em
+        font-weight: 600
+
 
     .ft-grid
         ul
@@ -15,25 +28,40 @@ footer
             justify-content: space-between
         a
             display: flex
+            align-items: center
             img
                 margin-right: 1em
-                width: 25px
+                width: 30px
+                // fill: white
+                filter:  brightness(0) invert(1)
 
     .footer-bottom
         margin: 0 -100vw
-        padding: 0 100vw 1em 100vw
+        padding: 1em 100vw 1em 100vw
         background: $footer-grey1
     h4
         font-size: 1.5rem
+        font-weight: 600
+        // margin-top: 1em
 
     .fb-grid-a
         columns: 6
         margin: 2em 0
+        border-bottom: 1px solid $grey
+        padding-bottom: 1em
+        line-height: 1.5rem
+        li
+            border-right: 1px solid $grey
+
     .fb-grid-b
         ul
             display: flex
             flex-direction: row
             flex-wrap: wrap
-            gap: 0.25em
+            gap: 0.9em
     .footer-bottom-foot
+        font-size: 0.9rem
         margin-top: 1em
+        span, a
+            font-weight: 600
+        

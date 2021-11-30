@@ -475,7 +475,7 @@ article .a-foot p:hover {
   text-decoration: underline;
 }
 .findus .findus-news {
-  margin-right: 1em;
+  margin-right: 0.1em;
   grid-area: news;
 }
 .findus .findus-news img {
@@ -514,13 +514,27 @@ article .a-foot p:hover {
   padding-left: 1em;
 }
 
+footer {
+  color: white;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+footer a:hover {
+  text-decoration: underline;
+}
 footer .footer-top {
   margin: 0 -100vw;
-  padding: 0 100vw;
+  padding: 1em 100vw;
   background-color: #2f2f2f;
+  border-bottom: 2px solid #949494;
 }
 footer h4 {
   font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  font-weight: 600;
 }
 footer .ft-grid ul {
   display: flex;
@@ -528,31 +542,44 @@ footer .ft-grid ul {
 }
 footer .ft-grid a {
   display: flex;
+  align-items: center;
 }
 footer .ft-grid a img {
   margin-right: 1em;
-  width: 25px;
+  width: 30px;
+  filter: brightness(0) invert(1);
 }
 footer .footer-bottom {
   margin: 0 -100vw;
-  padding: 0 100vw 1em 100vw;
+  padding: 1em 100vw 1em 100vw;
   background: #4c4c4c;
 }
 footer h4 {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 footer .fb-grid-a {
   columns: 6;
   margin: 2em 0;
+  border-bottom: 1px solid #949494;
+  padding-bottom: 1em;
+  line-height: 1.5rem;
+}
+footer .fb-grid-a li {
+  border-right: 1px solid #949494;
 }
 footer .fb-grid-b ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 0.25em;
+  gap: 0.9em;
 }
 footer .footer-bottom-foot {
+  font-size: 0.9rem;
   margin-top: 1em;
+}
+footer .footer-bottom-foot span, footer .footer-bottom-foot a {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=styles.css.map */
