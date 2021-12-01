@@ -11,12 +11,11 @@ body
   .container
     width: 1250px
     margin: 0 auto
-    @media screen and (max-width:1280px) 
+    @media screen and (max-width:1280px)
       width: 1008px
-    @media screen and (max-width:1007px) 
+    @media screen and (max-width:1007px)
       width: 95%
-    
-  
+
   .main
     display: flex
     @media screen and (max-width:1280px)
@@ -42,9 +41,9 @@ body
           width: 50%
           float: left
           margin: 0 1em 1em 0
-        @media screen and (max-width:1007px) 
+        @media screen and (max-width:1007px)
           width: 65%
-        @media screen and (max-width:600px) 
+        @media screen and (max-width:600px)
           width: 100%
 
       .article-info
@@ -73,70 +72,123 @@ body
             color: $link-blue
             text-decoration: underline
 
-
-  
     .main-grid
       display: grid
       grid-template-columns: 1fr 1fr 1fr
       grid-template-rows: 1fr
       gap: 1em
+      @media screen and (max-width:1280px)
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        grid-template-rows: 0.33fr 0.33fr 0.33fr
+        grid-template-areas: 'm1 m2 m3 m4' 'm1 m2 m3 m5' 'm1 m2 m3 m6'
+        @media screen and (max-width:1007px)
+          grid-template-columns: 1fr 1fr 1fr 
+          grid-template-rows: 1fr 1fr 
+          grid-template-areas: 'm1 m2 m3' 'm4 m5 m6'
+          @media screen and (max-width:600px)
+            grid-template-columns: minmax(500px, 500px)
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
+            grid-template-areas: 'm1' 'm2' 'm3' 'm4' 'm5' 'm6'
 
       article
         cursor: pointer
         display: flex
         flex-direction: column
         justify-content: space-between
+        @media screen and (max-width:600px)
+          border-top: 1px solid $grey
+          padding-top: 0.5em
+          display: inline-block!important
+          // flex-direction: row
 
-        img
+      @media screen and (max-width:1280px)
+        .m1
+          grid-area: m1
+        .m2
+          grid-area: m2
+        .m3
+          grid-area: m3
+        .m4
+          grid-area: m4
+        .m5
+          grid-area: m5
+        .m6
+          grid-area: m6
 
-        h3
-          font-weight: 600
-          &:hover
-            color: $link-blue
-            text-decoration: underline
+    img
+      @media screen and (max-width:600px)
+        width: 50%
+        float: left
+        margin-right: 0.25em
+        // clear: both
+        // @media screen and (max-width:400px)
+        //   display: none
+    h3
+      font-weight: 600
+      &:hover
+        color: $link-blue
+        text-decoration: underline
+    p
+      color: $dark-grey
+      font-size: 0.9rem
+    .article-foot
+      display: flex
+      align-items: center
+      gap: 0.75em
+      margin-top: 0.25em
+      img
+        width: 15px
+      span
+        color: $dark-grey
+        position: relative
+        &::after
+          content: ''
+          width: 1px
+          height: 15px
+          background: $grey
+          position: absolute
+          bottom: 2px
+          right: -7px
+      p
+        color: black
+        font-size: 0.9rem
+        &:hover
+          color: $link-blue
+          text-decoration: underline
 
-        p
-          color: $dark-grey
-          font-size: 0.9rem
+    .main2
+      grid-area: main2
+      // display: none
+    .main3
+      grid-area: main3
+    .main4
+      grid-area: main4
+      @media screen and (max-width:1280px)
+        display: none!important
+        @media screen and (max-width:1007px)
+          display: flex!important
+          // .m4
+          //   h3
+          //     margin: 1em 0
+    .main5
+      grid-area: main5
+      @media screen and (max-width:1280px)
+        display: none!important
+        @media screen and (max-width:1007px)
+          display: flex!important
+          // .m4
+          //   h3
+          //     margin: 1em 0
+    .main6
+      grid-area: main6
+      @media screen and (max-width:1280px)
+        display: none!important
+        @media screen and (max-width:1007px)
+          display: flex!important
+          // .m4
+          //   h3
+          //     margin: 1em 0
 
-        .article-foot
-          display: flex
-          align-items: center
-          gap: 0.75em
-          margin-top: 0.25em
-          img
-            width: 15px
-          span
-            color: $dark-grey
-            position: relative
-            &::after
-              content: ''
-              width: 1px
-              height: 15px
-              background: $grey
-              position: absolute
-              bottom: 2px
-              right: -7px
-
-          p
-            color: black
-            font-size: 0.9rem
-            &:hover
-              color: $link-blue
-              text-decoration: underline
-
-      .main1
-        grid-area: main1
-      .main2
-        grid-area: main2
-      .main3
-        grid-area: main3
-      .main4
-        grid-area: main4
-      .main5
-        grid-area: main5
-      .main6
-        grid-area: main6
-
-      .main-grid-pic
-        // width: 250px
+    .main-grid-pic
+      @media screen and (max-width:400px)
+        display: none!important

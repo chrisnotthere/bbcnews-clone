@@ -409,37 +409,92 @@ body .main .main-grid {
   grid-template-rows: 1fr;
   gap: 1em;
 }
+@media screen and (max-width: 1280px) {
+  body .main .main-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.33fr 0.33fr 0.33fr;
+    grid-template-areas: "m1 m2 m3 m4" "m1 m2 m3 m5" "m1 m2 m3 m6";
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1007px) {
+  body .main .main-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "m1 m2 m3" "m4 m5 m6";
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1007px) and (max-width: 600px) {
+  body .main .main-grid {
+    grid-template-columns: minmax(500px, 500px);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "m1" "m2" "m3" "m4" "m5" "m6";
+  }
+}
 body .main .main-grid article {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-body .main .main-grid article h3 {
+@media screen and (max-width: 600px) {
+  body .main .main-grid article {
+    border-top: 1px solid #949494;
+    padding-top: 0.5em;
+    display: inline-block !important;
+  }
+}
+@media screen and (max-width: 1280px) {
+  body .main .main-grid .m1 {
+    grid-area: m1;
+  }
+  body .main .main-grid .m2 {
+    grid-area: m2;
+  }
+  body .main .main-grid .m3 {
+    grid-area: m3;
+  }
+  body .main .main-grid .m4 {
+    grid-area: m4;
+  }
+  body .main .main-grid .m5 {
+    grid-area: m5;
+  }
+  body .main .main-grid .m6 {
+    grid-area: m6;
+  }
+}
+@media screen and (max-width: 600px) {
+  body .main img {
+    width: 50%;
+    float: left;
+    margin-right: 0.25em;
+  }
+}
+body .main h3 {
   font-weight: 600;
 }
-body .main .main-grid article h3:hover {
+body .main h3:hover {
   color: #2c888f;
   text-decoration: underline;
 }
-body .main .main-grid article p {
+body .main p {
   color: #504f4f;
   font-size: 0.9rem;
 }
-body .main .main-grid article .article-foot {
+body .main .article-foot {
   display: flex;
   align-items: center;
   gap: 0.75em;
   margin-top: 0.25em;
 }
-body .main .main-grid article .article-foot img {
+body .main .article-foot img {
   width: 15px;
 }
-body .main .main-grid article .article-foot span {
+body .main .article-foot span {
   color: #504f4f;
   position: relative;
 }
-body .main .main-grid article .article-foot span::after {
+body .main .article-foot span::after {
   content: "";
   width: 1px;
   height: 15px;
@@ -448,32 +503,65 @@ body .main .main-grid article .article-foot span::after {
   bottom: 2px;
   right: -7px;
 }
-body .main .main-grid article .article-foot p {
+body .main .article-foot p {
   color: black;
   font-size: 0.9rem;
 }
-body .main .main-grid article .article-foot p:hover {
+body .main .article-foot p:hover {
   color: #2c888f;
   text-decoration: underline;
 }
-body .main .main-grid .main1 {
-  grid-area: main1;
-}
-body .main .main-grid .main2 {
+body .main .main2 {
   grid-area: main2;
 }
-body .main .main-grid .main3 {
+body .main .main3 {
   grid-area: main3;
 }
-body .main .main-grid .main4 {
+body .main .main4 {
   grid-area: main4;
 }
-body .main .main-grid .main5 {
+@media screen and (max-width: 1280px) {
+  body .main .main4 {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1007px) {
+  body .main .main4 {
+    display: flex !important;
+  }
+}
+body .main .main5 {
   grid-area: main5;
 }
-body .main .main-grid .main6 {
+@media screen and (max-width: 1280px) {
+  body .main .main5 {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1007px) {
+  body .main .main5 {
+    display: flex !important;
+  }
+}
+body .main .main6 {
   grid-area: main6;
 }
+@media screen and (max-width: 1280px) {
+  body .main .main6 {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1007px) {
+  body .main .main6 {
+    display: flex !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  body .main .main-grid-pic {
+    display: none !important;
+  }
+}
+
 article {
   width: 100%;
   cursor: pointer;
