@@ -323,11 +323,16 @@ body .container {
 }
 @media screen and (max-width: 1007px) {
   body .container {
-    width: 100%;
+    width: 95%;
   }
 }
 body .main {
   display: flex;
+}
+@media screen and (max-width: 1280px) {
+  body .main {
+    flex-direction: column;
+  }
 }
 body .main .main-article {
   min-width: 500px;
@@ -345,6 +350,23 @@ body .main .main-article h2 {
 body .main .main-article h2:hover {
   color: #2c888f;
   text-decoration: underline;
+}
+@media screen and (max-width: 1280px) {
+  body .main .main-article .main-article-img {
+    width: 50%;
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+}
+@media screen and (max-width: 1007px) {
+  body .main .main-article .main-article-img {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 600px) {
+  body .main .main-article .main-article-img {
+    width: 100%;
+  }
 }
 body .main .main-article .article-info {
   display: flex;
@@ -368,6 +390,11 @@ body .main .main-article .main-article-headlines {
   list-style: disc;
   margin: 2em 1em;
   line-height: 1.5rem;
+}
+@media screen and (max-width: 1280px) {
+  body .main .main-article .main-article-headlines {
+    display: inline-block;
+  }
 }
 body .main .main-article .main-article-headlines li {
   cursor: pointer;
