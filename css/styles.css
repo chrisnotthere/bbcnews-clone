@@ -236,7 +236,7 @@ header .header-mid ul li {
     display: none;
   }
 }
-@media screen and (max-width: 745px) {
+@media screen and (max-width: 755px) {
   header .header-mid ul li:nth-child(9) {
     display: none;
   }
