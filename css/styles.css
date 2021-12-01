@@ -588,6 +588,13 @@ article .a-foot p:hover {
   color: #3fbbaa;
   text-decoration: underline;
 }
+@media screen and (max-width: 599px) {
+  article img {
+    float: left;
+    width: 50%;
+    margin-right: 0.25em;
+  }
+}
 
 .a-title {
   display: flex;
@@ -609,17 +616,70 @@ article .a-foot p:hover {
   display: flex;
   gap: 1em;
 }
-
-.b .b-title {
+@media screen and (max-width: 1280px) {
+  .a {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-areas: "a1 a2 a3 a4" "a1 a2 a3 a5";
+  }
+  .a .a1 {
+    grid-area: a1;
+  }
+  .a .a2 {
+    grid-area: a2;
+  }
+  .a .a3 {
+    grid-area: a3;
+  }
+  .a .a4 {
+    grid-area: a4;
+    border-bottom: 1px solid #949494;
+  }
+  .a .a4 img {
+    display: none;
+  }
+  .a .a4 .a-foot {
+    display: none !important;
+  }
+  .a .a5 {
+    grid-area: a5;
+  }
+  .a .a5 img {
+    display: none;
+  }
+  .a .a5 .a-foot {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 899px) {
+  .a {
+    grid-template-columns: repeat(6, 0.5fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-template-areas: "a1 a1 a2 a2 a3 a3" "a1 a1 a2 a2 a3 a3" "a4 a4 a4 a5 a5 a5";
+  }
+  .a .a4 {
+    border-bottom: none;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 899px) and (max-width: 599px) {
+  .a {
+    justify-items: center;
+    grid-template-columns: repeat(2, minmax(250px, 250px));
+    grid-template-rows: repeat(7, 0.5fr);
+    grid-template-areas: "a1 a1" "a1 a1" "a2 a2" "a2 a2" "a3 a3" "a3 a3" "a4 a5";
+  }
+}
+.a .b-title {
   display: flex;
   align-items: center;
   margin: 2em 0;
 }
-.b .b-title h3 {
+.a .b-title h3 {
   width: 290px;
   font-size: 1.5rem;
 }
-.b hr {
+.a hr {
   width: 100%;
   border-left: none;
   border-bottom: none;
@@ -629,6 +689,53 @@ article .a-foot p:hover {
 .b-grid {
   display: flex;
   gap: 1em;
+}
+@media screen and (max-width: 1280px) {
+  .b-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-areas: "b1 b2 b3 b4" "b1 b2 b3 b5";
+  }
+  .b-grid .b1 {
+    grid-area: b1;
+  }
+  .b-grid .b2 {
+    grid-area: b2;
+  }
+  .b-grid .b3 {
+    grid-area: b3;
+  }
+  .b-grid .b4 {
+    grid-area: b4;
+    border-bottom: 1px solid #949494;
+  }
+  .b-grid .b4 img {
+    display: none;
+  }
+  .b-grid .b5 {
+    grid-area: b5;
+  }
+  .b-grid .b5 img {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 899px) {
+  .b-grid {
+    grid-template-columns: repeat(6, 0.5fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-template-areas: "b1 b1 b2 b2 b3 b3" "b1 b1 b2 b2 b3 b3" "b4 b4 b4 b5 b5 b5";
+  }
+  .b-grid .b4 {
+    border-bottom: none;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 899px) and (max-width: 599px) {
+  .b-grid {
+    grid-template-columns: repeat(2, minmax(250px, 250px));
+    grid-template-rows: repeat(7, 0.5fr);
+    grid-template-areas: "b1 b1" "b1 b1" "b2 b2" "b2 b2" "b3 b3" "b3 b3" "b4 b5";
+  }
 }
 
 .c {
@@ -653,6 +760,53 @@ article .a-foot p:hover {
 .c-grid {
   display: flex;
   gap: 1em;
+}
+@media screen and (max-width: 1280px) {
+  .c-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-areas: "c1 c2 c3 c4" "c1 c2 c3 c5";
+  }
+  .c-grid .c1 {
+    grid-area: c1;
+  }
+  .c-grid .c2 {
+    grid-area: c2;
+  }
+  .c-grid .c3 {
+    grid-area: c3;
+  }
+  .c-grid .c4 {
+    grid-area: c4;
+    border-bottom: 1px solid #949494;
+  }
+  .c-grid .c4 img {
+    display: none;
+  }
+  .c-grid .c5 {
+    grid-area: c5;
+  }
+  .c-grid .c5 img {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 899px) {
+  .c-grid {
+    grid-template-columns: repeat(6, 0.5fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-template-areas: "c1 c1 c2 c2 c3 c3" "c1 c1 c2 c2 c3 c3" "c4 c4 c4 c5 c5 c5";
+  }
+  .c-grid .c4 {
+    border-bottom: none;
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 899px) and (max-width: 599px) {
+  .c-grid {
+    grid-template-columns: repeat(2, minmax(250px, 250px));
+    grid-template-rows: repeat(7, 0.5fr);
+    grid-template-areas: "c1 c1" "c1 c1" "c2 c2" "c2 c2" "c3 c3" "c3 c3" "c4 c5";
+  }
 }
 
 .findus {
