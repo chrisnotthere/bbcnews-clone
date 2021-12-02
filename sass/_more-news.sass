@@ -195,29 +195,41 @@ article
         align-items: center
         margin: 2em 0 1em 0
     h3
-        // flex-wrap: nowrap
         font-size: 1.5rem
         width: 170px
 
     hr
         width: 100%
-        // border-style: none
         border-left: none
         border-bottom: none
         border-right: none
 
     .findus-grid
-        // background: lightblue
-        // padding: 1em
+        // background: #999
         display: grid
-        grid-template-columns: repeat(5, minmax(1fr, 1fr))
+        grid-template-columns: repeat(5, minmax(0, 1fr))
         grid-template-rows: 0.5fr 0.5fr
         grid-template: 'socials empty daily news a' 'socials empty daily news b'
+        @media screen and (max-width:1280px)
+            grid-template-columns: repeat(4, minmax(0, 1fr))
+            grid-template-rows: 0.5fr 0.5fr
+            grid-template: 'socials empty daily news' 'socials empty a b'
+            @media screen and (max-width:1007px)
+                grid-template-columns: repeat(3, minmax(0, 1fr))
+                grid-template-rows: repeat(4, 0.5)
+                grid-template: 'socials empty empty' 'socials empty empty' 'daily news a' 'daily news b'
+                @media screen and (max-width:899px)
+                    display: flex
+                    flex-direction: column
+                    gap: 1em
+                    // grid-template-columns: repeat(2, 1fr)
+                    // grid-template-rows: repeat(6, 0.5)
+                    // grid-template: 'socials  empty' 'socials empty' 'daily news ' 'daily news' 'a empty' 'b empty'
     .socials
         display: flex
         grid-area: socials
         div
-            width: 100px
+            min-width: 100px
             height: 100px
             display: flex
             justify-content: center
@@ -228,7 +240,7 @@ article
             &:hover
                 filter: brightness(75%)
         img
-            width: 50px
+            min-width: 50px
             margin: auto
 
         .socials-twitter

@@ -829,16 +829,37 @@ article .a-foot p:hover {
 }
 .findus .findus-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(1fr, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-template-rows: 0.5fr 0.5fr;
   grid-template: "socials empty daily news a" "socials empty daily news b";
+}
+@media screen and (max-width: 1280px) {
+  .findus .findus-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template: "socials empty daily news" "socials empty a b";
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1007px) {
+  .findus .findus-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, 0.5);
+    grid-template: "socials empty empty" "socials empty empty" "daily news a" "daily news b";
+  }
+}
+@media screen and (max-width: 1280px) and (max-width: 1007px) and (max-width: 899px) {
+  .findus .findus-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
 }
 .findus .socials {
   display: flex;
   grid-area: socials;
 }
 .findus .socials div {
-  width: 100px;
+  min-width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -851,7 +872,7 @@ article .a-foot p:hover {
   filter: brightness(75%);
 }
 .findus .socials img {
-  width: 50px;
+  min-width: 50px;
   margin: auto;
 }
 .findus .socials .socials-twitter {
