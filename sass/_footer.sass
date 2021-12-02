@@ -21,11 +21,28 @@ footer
         margin-bottom: 0.5em
         font-weight: 600
 
-
     .ft-grid
+        .ft1
+            grid-area: 1
+        .ft2
+            grid-area: 2
+        .ft3
+            grid-area: 3
+        .ft4
+            grid-area: 4
         ul
             display: flex
             justify-content: space-between
+            @media screen and (max-width:599px)
+                display: grid
+                grid-template-columns: 1fr 1fr 
+                grid-template-rows: 1fr 1fr
+                grid-template-areas: '1 2' '3 4'
+                gap: 0.25em
+                @media screen and (max-width:479px)
+                    display: flex
+                    flex-direction: column
+
         a
             display: flex
             align-items: center
@@ -34,6 +51,7 @@ footer
                 width: 30px
                 // fill: white
                 filter:  brightness(0) invert(1)
+
 
     .footer-bottom
         margin: 0 -100vw

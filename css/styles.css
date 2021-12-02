@@ -978,9 +978,36 @@ footer h4 {
   margin-bottom: 0.5em;
   font-weight: 600;
 }
+footer .ft-grid .ft1 {
+  grid-area: 1;
+}
+footer .ft-grid .ft2 {
+  grid-area: 2;
+}
+footer .ft-grid .ft3 {
+  grid-area: 3;
+}
+footer .ft-grid .ft4 {
+  grid-area: 4;
+}
 footer .ft-grid ul {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 599px) {
+  footer .ft-grid ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "1 2" "3 4";
+    gap: 0.25em;
+  }
+}
+@media screen and (max-width: 599px) and (max-width: 479px) {
+  footer .ft-grid ul {
+    display: flex;
+    flex-direction: column;
+  }
 }
 footer .ft-grid a {
   display: flex;
