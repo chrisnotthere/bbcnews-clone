@@ -1028,11 +1028,26 @@ footer h4 {
   font-weight: 600;
 }
 footer .fb-grid-a {
-  columns: 6;
   margin: 2em 0;
   border-bottom: 1px solid #949494;
   padding-bottom: 1em;
   line-height: 1.5rem;
+  columns: 6;
+}
+@media screen and (max-width: 1007px) {
+  footer .fb-grid-a {
+    columns: 4;
+  }
+}
+@media screen and (max-width: 599px) {
+  footer .fb-grid-a {
+    columns: 3;
+  }
+}
+@media screen and (max-width: 399px) {
+  footer .fb-grid-a {
+    columns: 2;
+  }
 }
 footer .fb-grid-a li {
   border-right: 1px solid #949494;
