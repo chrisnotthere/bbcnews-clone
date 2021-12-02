@@ -1,19 +1,15 @@
 $font-stack: Verdana, Arial, Helvetica, sans-serif
 @import '_colors'
 
-.main-grid-pic
-
 body
   font: 100% $font-stack
   max-width: 100%
   overflow-x: hidden
 
   .container
-    // width: 1250px
     width: 95%
     margin: 0 auto
     @media screen and (max-width:1280px)
-      // width: 1008px
       width: 80%
     @media screen and (max-width:1007px)
       width: 95%
@@ -30,7 +26,6 @@ body
       p
         margin: 0.5em 0
         color: $dark-grey
-
       h2
         font-size: 1.75rem
         font-weight: 800
@@ -91,7 +86,6 @@ body
             grid-template-columns: minmax(500px, 500px)
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
             grid-template-areas: 'm1' 'm2' 'm3' 'm4' 'm5' 'm6'
-
       article
         cursor: pointer
         display: flex
@@ -122,9 +116,6 @@ body
         width: 50%
         float: left
         margin-right: 0.25em
-        // clear: both
-        // @media screen and (max-width:400px)
-        //   display: none
     h3
       font-weight: 600
       &:hover
@@ -160,7 +151,6 @@ body
 
     .main2
       grid-area: main2
-      // display: none
     .main3
       grid-area: main3
     .main4
@@ -169,27 +159,18 @@ body
         display: none!important
         @media screen and (max-width:1007px)
           display: flex!important
-          // .m4
-          //   h3
-          //     margin: 1em 0
     .main5
       grid-area: main5
       @media screen and (max-width:1280px)
         display: none!important
         @media screen and (max-width:1007px)
           display: flex!important
-          // .m4
-          //   h3
-          //     margin: 1em 0
     .main6
       grid-area: main6
       @media screen and (max-width:1280px)
         display: none!important
         @media screen and (max-width:1007px)
           display: flex!important
-          // .m4
-          //   h3
-          //     margin: 1em 0
 
     .main-grid-pic
       @media screen and (max-width:400px)
